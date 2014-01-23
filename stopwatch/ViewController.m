@@ -27,6 +27,7 @@
     
     [timeTicker invalidate];
     
+    
 }
 
 -(IBAction)reset:(id)sender{
