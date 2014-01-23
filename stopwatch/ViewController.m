@@ -25,6 +25,7 @@
 
 -(IBAction)stop:(id)sender{
     
+    
     [timeTicker invalidate];
     
     
