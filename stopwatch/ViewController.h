@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController{
+    
+    IBOutlet UILabel *time;
+    NSTimer *timeTicker;
+}
+
+@property(nonatomic, retain) UILabel *time;
+
+-(IBAction)start:(id)sender;
+-(IBAction)stop:(id)sender;
+-(IBAction)reset:(id)sender;
+
+-(void)showActivity;
 
 @end

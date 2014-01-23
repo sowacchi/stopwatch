@@ -1,23 +1,163 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vhx-ST-Gfl">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
+        <scene sceneID="DDf-cp-Lfb">
+            <objects>
+                <viewController id="vhx-ST-Gfl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fGY-Wd-RxR">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="StopWatch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgj-1K-HEs">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="0mJ-Rs-k6n"/>
+                                    <constraint firstAttribute="width" constant="178" id="MWV-ka-2MS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="38"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Gg-K6-Inm">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="E5N-6C-eHe"/>
+                                    <constraint firstAttribute="width" constant="93" id="UuW-qp-Q3Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="25"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2" kind="modal" id="f93-I7-jNB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="2Gg-K6-Inm" secondAttribute="bottom" constant="144" id="XpU-GM-Hrx"/>
+                            <constraint firstItem="zgj-1K-HEs" firstAttribute="centerX" secondItem="fGY-Wd-RxR" secondAttribute="centerX" type="default" id="YdQ-cT-JBy"/>
+                            <constraint firstItem="zgj-1K-HEs" firstAttribute="top" secondItem="fGY-Wd-RxR" secondAttribute="top" constant="129" id="b7v-t7-3q3"/>
+                            <constraint firstItem="2Gg-K6-Inm" firstAttribute="centerX" secondItem="zgj-1K-HEs" secondAttribute="centerX" type="default" id="emu-kP-qeH"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="po1-bZ-J4N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-238" y="153"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="5">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycI-g3-YkL">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="1uV-CU-Ty1"/>
+                                    <constraint firstAttribute="height" constant="85" id="Ec0-A3-0BP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="25"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="start:" destination="2" eventType="touchUpInside" id="PD0-bG-jbg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vZ-aA-h4O">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="GCG-26-9o7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="23"/>
+                                <state key="normal" title="STOP">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stop:" destination="2" eventType="touchUpInside" id="9hM-9o-Dwb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSW-js-uor">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="hNX-rw-a7h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Bold" family="Bodoni 72" pointSize="25"/>
+                                <state key="normal" title="RESET">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="reset:" destination="2" eventType="touchUpInside" id="lWg-Xj-vAj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vzh-4M-6mi">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="Agh-T0-s7I"/>
+                                    <constraint firstAttribute="width" constant="189" id="oi3-V4-yvq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vzh-4M-6mi" firstAttribute="top" secondItem="3" secondAttribute="top" constant="112" id="2fn-Xy-ikq"/>
+                            <constraint firstItem="6vZ-aA-h4O" firstAttribute="top" secondItem="ycI-g3-YkL" secondAttribute="top" type="default" id="IHm-qI-aoo"/>
+                            <constraint firstItem="ycI-g3-YkL" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="N9Q-XF-M1F"/>
+                            <constraint firstItem="OSW-js-uor" firstAttribute="bottom" secondItem="6vZ-aA-h4O" secondAttribute="bottom" type="default" id="SRo-te-m7f"/>
+                            <constraint firstItem="6vZ-aA-h4O" firstAttribute="bottom" secondItem="ycI-g3-YkL" secondAttribute="bottom" type="default" id="UjG-Ib-5Td"/>
+                            <constraint firstItem="6vZ-aA-h4O" firstAttribute="centerX" secondItem="Vzh-4M-6mi" secondAttribute="centerX" type="default" id="dhf-tc-Stk"/>
+                            <constraint firstItem="OSW-js-uor" firstAttribute="top" secondItem="6vZ-aA-h4O" secondAttribute="top" type="default" id="ezU-Qs-0dr"/>
+                            <constraint firstAttribute="trailing" secondItem="OSW-js-uor" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="lLJ-v6-YRu"/>
+                            <constraint firstAttribute="bottom" secondItem="OSW-js-uor" secondAttribute="bottom" constant="134" id="nUs-b1-2Ze"/>
+                            <constraint firstItem="Vzh-4M-6mi" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="o1I-EZ-F99"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="time" destination="Vzh-4M-6mi" id="j72-rt-CNE"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="254" y="153"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="reset:"/>
+                <relationship kind="action" name="start:"/>
+                <relationship kind="action" name="stop:"/>
+                <relationship kind="outlet" name="time" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

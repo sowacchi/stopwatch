@@ -13,6 +13,36 @@
 @end
 
 @implementation ViewController
+@synthesize time;
+
+
+
+-(IBAction)start:(id)sender{
+    
+    timeTicker = [NSTimer scheduledTimerWithTimeInterval:00.01 target:self selector:@selector(showActivity) userInfo:nil repeats:YES];
+    
+}
+
+-(IBAction)stop:(id)sender{
+    
+    [timeTicker invalidate];
+    
+}
+
+-(IBAction)reset:(id)sender{
+    
+time.text = @"0.00";
+    
+}
+
+-(void)showActivity{
+    float currentTime = [time.text floatValue];
+    float displayTime = currentTime + 00.01;
+
+    time.text = [NSString stringWithFormat:@"%.2f",displayTime];
+    
+}
+
 
 - (void)viewDidLoad
 {
